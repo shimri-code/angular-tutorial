@@ -1,0 +1,7 @@
+.stop_btn {
+    background-color: rgba(83, 170, 83, 0.705);
+
+    border: 1px solid red;
+    padding: 5px;
+    margin: 5px;
+}
