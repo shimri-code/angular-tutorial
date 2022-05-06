@@ -6,6 +6,16 @@
   <label>{{ timeRemain }}</label>
 </div>
 <div>
+
+  <div>
+    <label>seconds</label>
+    <!-- Two way binding -->
+    <input [value]="seconds" (change)="secondsUpdate($event)" type="number" min="1" max="59">
+    <label>minutes</label>
+    <!-- Two way binding -->
+    <input [value]="minutes" (change)="minutesUpdate($event)" type="number" min="0" max="59">
+  </div>
+
   <!-- Event Binding () -->
   <button  (click)="startTimer()" >Start</button>
 
