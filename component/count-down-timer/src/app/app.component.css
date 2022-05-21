@@ -1,7 +1,100 @@
-.stop_btn {
-    background-color: rgba(83, 170, 83, 0.705);
+*{
+    margin: 0;
+    padding: 0;
 
-    border: 1px solid red;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.timer
+{
+    --primary-color:#001747;
+    --second-color:#c4fdc4dc;
+
+    background-color: var(--primary-color);
+    padding: 50px;
+
+    border-top: 1px solid #c4fdc4dc;
+    border-bottom: 4px solid #000133;
+    border-radius: 5%;
+
+    box-shadow: 20px 5px 20px 0px gray;
+}
+
+.time{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.time label{
+    color:var(--second-color);
+    font-size: xx-large;
+}
+
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.title label{
+    color:var(--second-color);
+    font-size: xx-large;
+}
+
+.btns
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.seconds {
+    margin: 10px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seconds input{
+    background-color: var(--primary-color);
+    color: var(--second-color);
+    width: 3rem;
+}
+
+.seconds label{
+    color: var(--second-color);
+}
+
+.btns
+{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn{
+    color: var(--primary-color);
+
+    background-color:var(--second-color);
     padding: 5px;
-    margin: 5px;
+    width: 10ch;
+    letter-spacing: 0.2ch;
+}
+
+.btn:hover{
+    opacity: 0.5;
+}
+
+.stop-btn{
+    background-color:rgba(245, 158, 158, 0.863);
 }

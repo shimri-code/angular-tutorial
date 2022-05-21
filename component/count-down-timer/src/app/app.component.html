@@ -1,26 +1,31 @@
-<div>
-  <label>Count Down Timer</label>
+<div class="container">
+  <div class="timer">
+    <div class="title">
+      <label>Count Down Timer</label>
+    </div>
+    <div class="time">
+      <!-- interpolation -->
+      <label>{{ timeRemain }}</label>
+    </div>
+    <div>
+    
+      <div class="seconds">
+        <label>seconds</label>
+        <!-- Two way binding -->
+        <input [value]="seconds" (change)="secondsUpdate($event)" type="number" min="1" max="59">
+        <label>minutes</label>
+        <!-- Two way binding -->
+        <input [value]="minutes" (change)="minutesUpdate($event)" type="number" min="0" max="59">
+      </div>
+    
+      <div class="btns">
+        <!-- Event Binding () -->
+        <button class="btn start-btn" (click)="startTimer()" >Start</button>
+      
+        <!-- Property Binding -->
+        <button class="btn stop-btn" id="btn-id" [disabled]="!isStarted" (click)="stopTimer()">Stop</button>
+
+      </div>
+    </div>
 </div>
-<div>
-  <!-- interpolation -->
-  <label>{{ timeRemain }}</label>
 </div>
-<div>
-
-  <div>
-    <label>seconds</label>
-    <!-- Two way binding -->
-    <input [value]="seconds" (change)="secondsUpdate($event)" type="number" min="1" max="59">
-    <label>minutes</label>
-    <!-- Two way binding -->
-    <input [value]="minutes" (change)="minutesUpdate($event)" type="number" min="0" max="59">
-  </div>
-
-  <!-- Event Binding () -->
-  <button  (click)="startTimer()" >Start</button>
-
-  <!-- Property Binding -->
-  <button class="stop_btn" [disabled]="!isStarted" (click)="stopTimer()">Stop</button>
-</div>
-
-{{ timeRemain }}
