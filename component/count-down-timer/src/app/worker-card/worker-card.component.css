@@ -1,0 +1,19 @@
+.card
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    margin: 0px 20px;
+    cursor: pointer;
+}
+
+img{
+    width: 150px;
+    height: 170px;
+}
+
+p{
+    max-width: 12ch;
+}

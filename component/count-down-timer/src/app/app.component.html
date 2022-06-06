@@ -1,3 +1,19 @@
 <div class="container">
-  <count-down-timer></count-down-timer>
+  <div class="workers-container">
+
+    <app-worker-card *ngFor="let worker of workers" 
+    [imgSrc]="worker.imgSrc"
+    [name]="worker.name"
+    [jobTitle]="worker.jobTitle"
+    [about]="worker.about"
+    (newNameChoice)="updateName($event)"
+    ></app-worker-card>
+
+    <!-- <app-worker-card [imgSrc]="imgSrc" 
+    [name]="name" [jobTitle]="jobTitle"
+    [about]="about" (newNameChoice)="updateName(name)"
+    ></app-worker-card> -->
+  </div>
+
+  <h5>{{choosedName}}</h5>
 </div>
